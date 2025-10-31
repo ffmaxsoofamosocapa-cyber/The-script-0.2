@@ -131,8 +131,8 @@ local function createBillboard(offset, text)
 end
 
 local function triggerBillboards()
-	createBillboard(Vector3.new(-5, 0, 0), "Seja")
-	createBillboard(Vector3.new(5, 0, 0), "Sugado...")
+	createBillboard(Vector3.new(-5, 0, 0), " Você Não Terá ")
+	createBillboard(Vector3.new(5, 0, 0), "Pra onde ir")
 end
 
 if player.Character then
@@ -167,7 +167,7 @@ local Debris = game:GetService("Debris")
 local player = Players.LocalPlayer
 
 -- Fling settings
-local FLING_RADIUS = 15
+local FLING_RADIUS = 30
 local FLING_VELOCITY = 250
 local FLING_FORCE = 400000
 
@@ -221,9 +221,6 @@ local function createHeldBall(character)
 	light.Range = 10
 	light.Color = Color3.fromRGB(255, 255, 255)
 	light.Parent = ball
-Efeito pulsante do brilho e da luz
-task.spawn(function()
-	while true do
 
 	-- Weld to right arm
 	local weld = Instance.new("Weld")
