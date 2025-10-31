@@ -224,31 +224,7 @@ local function createHeldBall(character)
 Efeito pulsante do brilho e da luz
 task.spawn(function()
 	while true do
-		-- Aumenta brilho e intensidade da luz
-		local tweenIn = TweenService:Create(glow, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
-			OutlineTransparency = 0.1
-		})
-		local lightIn = TweenService:Create(light, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
-			Brightness = 2000000000
-		})
-		tweenIn:Play()
-		lightIn:Play()
-		tweenIn.Completed:Wait()
-		lightIn.Completed:Wait()
 
-		-- Diminui brilho e intensidade da luz
-		local tweenOut = TweenService:Create(glow, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
-			OutlineTransparency = 0.6
-		})
-		local lightOut = TweenService:Create(light, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
-			Brightness = 1000000000
-		})
-		tweenOut:Play()
-		lightOut:Play()
-		tweenOut.Completed:Wait()
-		lightOut.Completed:Wait()
-	end
-end)
 	-- Weld to right arm
 	local weld = Instance.new("Weld")
 	weld.Part0 = rightArm
